@@ -1,9 +1,3 @@
-/*
-  Adaptacion para DB_SCRUM_PLANNING.
-  Los parametros y columnas devueltas se alinean con los campos del modelo
-  de entidad correspondiente (tipos SQL equivalentes a int/str/datetime/Optional/bool).
-  El codigo Pydantic de *_Models.py pertenece a Python y no se pega dentro de T-SQL.
-*/
 CREATE OR ALTER PROC [SQM_GENERAL].[USP_TaskComments] (
     @i_taskCommentId INT = NULL,
     @i_taskCommentParentLink INT = NULL,
