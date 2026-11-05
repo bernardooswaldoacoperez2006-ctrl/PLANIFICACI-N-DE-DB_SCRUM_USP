@@ -1,14 +1,4 @@
-/* Instala los 12 procedimientos almacenados del proyecto. Ejecutar despues de 00-03. */
-USE [DB_SCRUM_PLANNING];
 GO
-
-/* ===== USP_Roles.sql ===== */
-/*
-  Adaptacion para DB_SCRUM_PLANNING.
-  Los parametros y columnas devueltas se alinean con los campos del modelo
-  de entidad correspondiente (tipos SQL equivalentes a int/str/datetime/Optional/bool).
-  El codigo Pydantic de *_Models.py pertenece a Python y no se pega dentro de T-SQL.
-*/
 CREATE OR ALTER PROC [SQM_SECURITY].[USP_Roles] (
     @i_rolId INT = NULL,
     @i_rolName VARCHAR(80) = NULL,
@@ -130,14 +120,6 @@ END;
 GO
 
 GO
-
-/* ===== USP_Users.sql ===== */
-/*
-  Adaptacion para DB_SCRUM_PLANNING.
-  Los parametros y columnas devueltas se alinean con los campos del modelo
-  de entidad correspondiente (tipos SQL equivalentes a int/str/datetime/Optional/bool).
-  El codigo Pydantic de *_Models.py pertenece a Python y no se pega dentro de T-SQL.
-*/
 CREATE OR ALTER PROC [SQM_SECURITY].[USP_Users]
 (
     @i_userId INT = NULL,
@@ -406,14 +388,6 @@ END;
 GO
 
 GO
-
-/* ===== USP_Status.sql ===== */
-/*
-  Adaptacion para DB_SCRUM_PLANNING.
-  Los parametros y columnas devueltas se alinean con los campos del modelo
-  de entidad correspondiente (tipos SQL equivalentes a int/str/datetime/Optional/bool).
-  El codigo Pydantic de *_Models.py pertenece a Python y no se pega dentro de T-SQL.
-*/
 CREATE OR ALTER PROC [SQM_CATALOGS].[USP_Status]
 (
     @i_statusId INT = NULL,
@@ -573,14 +547,6 @@ BEGIN
 END;
 GO
 GO
-
-/* ===== USP_Priorities.sql ===== */
-/*
-  Adaptacion para DB_SCRUM_PLANNING.
-  Los parametros y columnas devueltas se alinean con los campos del modelo
-  de entidad correspondiente (tipos SQL equivalentes a int/str/datetime/Optional/bool).
-  El codigo Pydantic de *_Models.py pertenece a Python y no se pega dentro de T-SQL.
-*/
 CREATE OR ALTER PROC [SQM_CATALOGS].[USP_Priorities] (
     @i_priorityId INT = NULL,
     @i_priorityName VARCHAR(80) = NULL,
@@ -702,14 +668,6 @@ END;
 GO
 
 GO
-
-/* ===== USP_BusinessValues.sql ===== */
-/*
-  Adaptacion para DB_SCRUM_PLANNING.
-  Los parametros y columnas devueltas se alinean con los campos del modelo
-  de entidad correspondiente (tipos SQL equivalentes a int/str/datetime/Optional/bool).
-  El codigo Pydantic de *_Models.py pertenece a Python y no se pega dentro de T-SQL.
-*/
 CREATE OR ALTER PROC [SQM_CATALOGS].[USP_BusinessValues] (
     @i_businessValueId INT = NULL,
     @i_businessValueName VARCHAR(80) = NULL,
@@ -831,14 +789,6 @@ END;
 GO
 
 GO
-
-/* ===== USP_ActivityTypes.sql ===== */
-/*
-  Adaptacion para DB_SCRUM_PLANNING.
-  Los parametros y columnas devueltas se alinean con los campos del modelo
-  de entidad correspondiente (tipos SQL equivalentes a int/str/datetime/Optional/bool).
-  El codigo Pydantic de *_Models.py pertenece a Python y no se pega dentro de T-SQL.
-*/
 CREATE OR ALTER PROC [SQM_CATALOGS].[USP_ActivityTypes] (
     @i_activityTypeId INT = NULL,
     @i_activityTypeName VARCHAR(80) = NULL,
@@ -960,14 +910,6 @@ END;
 GO
 
 GO
-
-/* ===== USP_Initiatives.sql ===== */
-/*
-  Adaptacion para DB_SCRUM_PLANNING.
-  Los parametros y columnas devueltas se alinean con los campos del modelo
-  de entidad correspondiente (tipos SQL equivalentes a int/str/datetime/Optional/bool).
-  El codigo Pydantic de *_Models.py pertenece a Python y no se pega dentro de T-SQL.
-*/
 CREATE OR ALTER PROC [SQM_GENERAL].[USP_Initiatives] (
     @i_initiativeId INT = NULL,
     @i_initiativeSummary VARCHAR(200) = NULL,
@@ -1106,14 +1048,6 @@ END;
 GO
 
 GO
-
-/* ===== USP_Epics.sql ===== */
-/*
-  Adaptacion para DB_SCRUM_PLANNING.
-  Los parametros y columnas devueltas se alinean con los campos del modelo
-  de entidad correspondiente (tipos SQL equivalentes a int/str/datetime/Optional/bool).
-  El codigo Pydantic de *_Models.py pertenece a Python y no se pega dentro de T-SQL.
-*/
 CREATE OR ALTER PROC [SQM_GENERAL].[USP_Epics] (
     @i_epicId INT = NULL,
     @i_epicName VARCHAR(100) = NULL,
@@ -1260,14 +1194,6 @@ END;
 GO
 
 GO
-
-/* ===== USP_Features.sql ===== */
-/*
-  Adaptacion para DB_SCRUM_PLANNING.
-  Los parametros y columnas devueltas se alinean con los campos del modelo
-  de entidad correspondiente (tipos SQL equivalentes a int/str/datetime/Optional/bool).
-  El codigo Pydantic de *_Models.py pertenece a Python y no se pega dentro de T-SQL.
-*/
 CREATE OR ALTER PROC [SQM_GENERAL].[USP_Features] (
     @i_featureId INT = NULL,
     @i_featureSummary VARCHAR(500) = NULL,
@@ -1408,14 +1334,6 @@ END;
 GO
 
 GO
-
-/* ===== USP_ProductBacklogItems.sql ===== */
-/*
-  Adaptacion para DB_SCRUM_PLANNING.
-  Los parametros y columnas devueltas se alinean con los campos del modelo
-  de entidad correspondiente (tipos SQL equivalentes a int/str/datetime/Optional/bool).
-  El codigo Pydantic de *_Models.py pertenece a Python y no se pega dentro de T-SQL.
-*/
 CREATE OR ALTER PROC [SQM_GENERAL].[USP_ProductBacklogItems]
 (
     @i_PBIId INT = NULL,
@@ -1607,14 +1525,6 @@ BEGIN
 END;
 GO
 GO
-
-/* ===== USP_Tasks.sql ===== */
-/*
-  Adaptacion para DB_SCRUM_PLANNING.
-  Los parametros y columnas devueltas se alinean con los campos del modelo
-  de entidad correspondiente (tipos SQL equivalentes a int/str/datetime/Optional/bool).
-  El codigo Pydantic de *_Models.py pertenece a Python y no se pega dentro de T-SQL.
-*/
 CREATE OR ALTER PROC [SQM_GENERAL].[USP_Tasks] (
     @i_taskId INT = NULL,
     @i_taskSummary VARCHAR(500) = NULL,
